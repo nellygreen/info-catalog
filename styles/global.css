@@ -84,12 +84,12 @@ ul#nav li a.selected {
 	margin-left: 250px;
 	height: auto;
 	background-color: #D9DADB;
-	padding: 30px;
+	padding: 30px 30px 30px 30px;
 }
 
 
-div#box .box-panel {
-	padding: 30px 60px 30px 60px;
+div#box  {
+	padding: 0px 60px 30px 60px;
 	background-color: #F7F7F7;
 }
 
