@@ -18,8 +18,8 @@
       
      <div class="sidebar">
 	  <ul id="nav">
-	    <li><a href="#topic1">Topic #1</a></li>
-		<li><a href="#topic2">Topic #2</a></li>
+	    <li><a href="#topic1">HTML Syntax</a></li>
+		<li><a href="#topic2">CSS Syntax</a></li>
 		<li><a href="#topic3">Topic #3</a></li>
 	  </ul>	
 	</div>
@@ -243,9 +243,9 @@ In the form tag:<br />
                 We take a part of HTML, using CSS-selectors and style it;<br /> 
           <br />              
  <ul>
-       <h3> - ID-Selectors - Styling a unique part of HTML.<br /></h3> 
+       <h3> - ID-Selectors<br /></h3> 
 <br />
- <li>Every id is used only 1 time.<br /></li>
+ <li>Styling a unique part of HTML. Every id is used only 1 time.<br /></li>
 <br />
      <li>In html-file we geve a sertain area unique ID this way:</br></li>
 </br>
@@ -272,6 +272,7 @@ h1 {<br />
      <br />
      <li>We can create a class and apply it to multiple elements on the page.</br></li>
 </br>
+<li>Classes help to reduce amount of code, so we use them a lot, when we need the same property in different tags.</li></br>
     <li>In html-file:<br /></li>
 <br />
 &lt;h1 class="superHeading"&gt;My super heading&lt;/h1&gt;<br />
@@ -283,9 +284,267 @@ h1 {<br />
   color: ...;<br />
 };<br /> 
      <br />
-***********************************************************************************************************
+<h3> - Descendent-Selectors<br /></h3>
+     <br />
+ <li>Mix of previous types.<br /></li>
+     <br />
                 </ul>
+***********************************************************************************************************<br />
+<br />
+<h3>2. CSS Workflow<br /></h3>
+<br />
+ <h3>- Basic Layout:<br /></h3>
+<br /><ul>
+#container {};<br />
+<br />
+#header {};<br />
+<br />
+#nav {};<br />
+<br />
+#body {};<br />
+<br />
+.main {};<br />
+<br />
+.side {};<br />
+<br />
+#footer {};<br />
+<br />
+<h3> - Center the Layout:<br /></h3>
+<br />
+#container {<br />
+<br />
+width: ...px;<br />
+margin: 0 auto; (vertical horizontal)<br />
+<br />
+};<br />
+<br />
+ <h3>- Make navigation sit horizontally:<br /></h3>
+<br />
+#nav li {<br />
+<br />
+list-style: none; (remove bullets)<br />
+float: left;<br />
+<br />
+};<br />
+<br />
+<h3>- Clear navigation bar floats:<br /></h3>
+<br />
+ <li>Put clearfix code into a nav div:<br /></li>
+<br />
+&lt;div id="nav" class="clearfix"&gt;&lt;/div&gt;<br />
+<br />
+<li>Also define 'clearfix' values in CSS-file.</li>
+<br />
+<br />
+ <h3>- Make 2 central columns to sit side by side:<br /></h3>
+<br />
+.main {<br />
+<br />
+width: ...px;<br />
+float: left;<br />
+<br />
+}; <br />
+<br />
+.side {<br />
+<br />
+width: ...px;<br />
+float: left;<br />
+<br />
+};<br />
+<br />
+ <h3>- Clear footer floats:<br /></h3>
+<br />
+ <li>Put clearfix code into a footer div:<br /></li>
+<br />
+&lt;div id="footer" class="clearfix"&gt;&lt;/div&gt;<br />
+<br />
+ <h3>- Add padding between 2 columns. To do this:<br /></h3>
+<br />
+<li>Add new div with class sel. inside main column div in the html-file:<br /></li>
+<br />
+&lt;div class="main-inner"&gt;&lt;/div&gt;<br />
+<br />
+<li>In css-file:<br /></li>
+<br />
+.main-inner {<br />
+<br />
+padding: 0 60px 0 0;  (top. right, bottom, left)<br />
+<br />
+};<br />
+<br />
+ <h3>- Style the navigation:<br /></h3>
+<br />
+<li>Remove default spacing:<br /></li>
+<br />
+#nav {<br />
+<br />
+margin: 0;<br />
+padding: 0;<br />
+<br />
+};<br />
+<br />
+<li>Add individual spacing between each nav item:<br /></li>
+<br />
+#nav li {<br />
+<br />
+padding: 0 15px 0 0; <br />
+<br />
+};<br />
+<br />
+<li>Remove underline under links:<br /></li>
+<br />
+#nav li a:link; #nav li a:visited {<br />
+<br />
+text-decoration: none;<br />
+<br />
+};<br />
+<br />
+<li>Set color of the Navigation bar:<br /></li>
+<br />
+#nav {<br />
+<br />
+background-color: #......;<br />
+<br />
+};<br />
+<br />
+ <h3>- Style Body:<br /></h3>
+<br />
+<li>Change font:<br /></li>
+<br />
+#body {<br />
+<br />
+font-family: Ariel, Sans-Serif; (2nd in case 1st not loading)<br />
+<br />
+};<br />
+<br />
+<li>Set Line-height of paragraphs:<br /></li>
+<br />
+#body  p {<br />
+    <br />
+line-height: 1.6em;<br />
+    <br />
+};<br />
+<br />
+<li>Add padding to the container:<br /></li>
+<br />
+#container {<br />
+    <br />
+padding: 30px;<br />
+<br />
+};<br />
+<br />
+<h3> - Style the Footer:<br /></h3>
+<br />
+#footer {<br />
+<br />
+background-color: #....;<br />
+color: white; (text color)<br />
+<br />
+};
+<br />
+</ul>
 
+***********************************************************************************************************<br />
+<br />
+<h3>3. CSS Elements<br /></h3>
+<br />
+
+<ul>
+ <h3>- Equal height columns.<br /></h3>
+<br />
+If we want one of columns to have a tiled background image, and to be equal-height to other:<br />
+<br />
+<li>We prepare image the right with but very short;<br /></li>
+<br />
+<li>We'll tile in by Y-axis:<br /></li>
+<br />
+#body  {<br />
+<br />
+background: url(../images/backgtound-tile.jpg);<br />
+<br />
+top-left: repeat-y;<br />
+<br />
+};<br />
+<br />
+ <h3>- Navigation Menu.<br /></h3>
+<br />
+<li>In html we create menu as a unordered list:<br /></li>
+<br />
+&lt;ul id="nav" class="clearfix"&gt;<br />
+<br />
+    &lt;li&gt;&lt;a href="#"&gt;HOME&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href="#"&gt;ABOUT&lt;/a&gt;&lt;/li&gt;<br />
+<br />
+&lt;/ul&gt;<br />
+<br />
+<li>In CSS we remowe margin and paddinl from ul and apply background-color:<br /></li>
+<br />
+#nav {<br />
+<br />
+margin: 0;<br />
+padding: 0;<br />
+background-color: #...;<br />
+<br />
+<li>For list items: remove bullets, float to left/right to make links stay in one line;<br /></li>
+<br />
+#nav li {<br />
+<br />
+list-style: none;<br />
+float: left;<br />
+padding: 0 15px 0 0;<br />
+<br />
+<li>Display links as a block. <br /></li>
+<br />
+This way we target square around all links, not the scquare around individual link (for inline elements):<br />
+<br />
+#nav li a:link; #nav li a:visited {<br />
+<br />
+display: block;<br />
+padding: 10px; (around all block)<br />
+<br />
+<li>To separate links:<br /></li>
+<br />
+border-right: 1px solid red;<br />
+<br />
+<li>To add a hover style:<br /></li>
+<br />
+#nav li a:hover {<br />
+<br />
+background-color; red;<br />
+color: white;<br />
+<br />
+};<br />
+<br />
+    
+  <h3>  - CSS Background image<br /></h3>
+<br />
+<li>If the image is used for styling purposes (logos, large-heros etc), we use backgroung instead if img element.Better for CEO.<br /></li>
+<br />
+#header h1{<br />
+<br />
+background: url(../images/headimg.jpg) top-left: no-repeat;<br />
+width: ...px;<br />
+height: ...px;<br />
+text-indent: -999px; (to hide text)<br />
+<br />
+<li>To make it a link:<br /></li>
+<br />
+In html-code add:<br />
+<br />
+&lt;h1&gt;&lt;a href="#"&gt;CSS Logo Here&lt;/a&gt;&lt;/h1&gt;<br />
+<br />
+In CSS code:<br />
+<br />
+#header h1 a:link, #header h1 a:visited {<br />
+<br />
+display: block;<br />
+width: ..px;<br />
+height: ..px;<br />
+<br />
+};
+</ul>
+
+***********************************************************************************************************<br />
 
                     </p> 
                  </div>
