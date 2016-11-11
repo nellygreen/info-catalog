@@ -450,21 +450,7 @@ color: white; (text color)<br />
 <br />
 
 <ul>
- <h3>- Equal height columns.<br /></h3>
-<br />
-If we want one of columns to have a tiled background image, and to be equal-height to other:<br />
-<br />
-<li>We prepare image the right with but very short;<br /></li>
-<br />
-<li>We'll tile in by Y-axis:<br /></li>
-<br />
-#body  {<br />
-<br />
-background: url(../images/backgtound-tile.jpg);<br />
-<br />
-top-left: repeat-y;<br />
-<br />
-};<br />
+ 
 <br />
  <h3>- Navigation Menu.<br /></h3>
 <br />
@@ -515,7 +501,41 @@ color: white;<br />
 <br />
 };<br />
 <br />
-    
+    <h3> - CSS Dropdown Menu<br /></h3>
+<br />
+<li>First we create simple menu as previous. Remove bullets, make spacing etc.<br /></li>
+<br />
+<li>To add second level of links in 1 section: <br /></li>
+<br />
+In Html file in main &lt;ul&gt; cleate new &lt;ul&gt; with &lt;li&gt; for each buttton<br />
+<br />
+<li>To hide second-line links in default state: <br /></li>
+<br />
+In CSS-file<br />
+<br />
+div# nav ul ul {<br />
+<br />
+position: absolute;<br />
+left: -999em;<br />
+<br />
+};
+    <br />
+    <br />
+    <li>To display links back when hover over 1st level link:<br /></li>
+<br />
+div#nav ul li:hover ul {<br />
+<br />
+left: auto; (this will cancel invisibility)<br />
+<br />
+<li>To make dropdown menu vertical and remove extra spacing, create new css-rule:<br /></li>
+<br />
+div #nav ul li ul li {<br />
+<br />
+float: none;<br />
+<br />
+};
+ <br /> 
+    <br />
   <h3>  - CSS Background image<br /></h3>
 <br />
 <li>If the image is used for styling purposes (logos, large-heros etc), we use backgroung instead if img element.Better for CEO.<br /></li>
@@ -542,8 +562,244 @@ width: ..px;<br />
 height: ..px;<br />
 <br />
 };
-</ul>
+    <br />
+    <br />
+    <h3>- Equal height columns.<br /></h3>
+<br />
+If we want one of columns to have a tiled background image, and to be equal-height to other:<br />
+<br />
+<li>We prepare image the right with but very short;<br /></li>
+<br />
+<li>We'll tile in by Y-axis:<br /></li>
+<br />
+#body  {<br />
+<br />
+background: url(../images/backgtound-tile.jpg);<br />
+<br />
+top-left: repeat-y;<br />
+<br />
+};<br />
+    <br />
+    
+  <h3> - CSS Shadows<br /></h3> 
+<br />
+<li>Text shadow - applied to text elements:<br /></li>
+<br />
+h1 {<br />
+<br />
+text-shadow: 3px 0px 0px red; (offset-right, offset-vertical, blur, color )<br />
+<br />
+};<br />
+<br />
+<li>Box shadow<br /></li>
+<br />
+div.container {<br />
+<br />
+box-shadow: 5px 5px 5px red;<br />
+<br />
+};<br />
+<br />
+<li>To apply transparency to shadow we use rgba value:<br /></li>
+<br />
+box-shadow: 5px 5px 5px rgba(123, 170, 13, .5); (values of red, green, blue, opacity 1=100%)<br />
+<br />
+    <br />
+<h3>- CSS Positioning<br /></h3>
+<br />
+<li>Relative (position: relative) - When ve need to move element without affecting other elements around;<br /></li>
+<br />
+<li>Absolute (position: absolute) - Align the element according to its patent element.<br /></li>
+<br />
+<li>Parent element. To make element a parent wi give it relative position.<br /></li>
+<br />
+    <br />
+ <h3>- CSS Typograhy<br /></h3>
+<br />
+font-family: - Font Type;<br />
+<br />
+font-size: 3px/em/rem;<br />
+<br />
+font-weight: normal/bold/number;<br />
+<br />
+letter-spacing: 3px;<br />
+<br />
+text-shadow: ...;<br />
+<br />
+text-decoration: none/underline; (by default)<br />
+<br />
+text-transform: uppercase/lowercase; (all big or all small)<br />
+<br />
+text-align: right/center/left;<br />
+<br />
+line-height: ..px;<br />
+<br />
+text-indent: ..px; (Spacing at first line of the paragraph)<br />
+<br />
+<br />
+ <h3>- CSS Rounded Corners<br /></h3>
+<br />
+<li>To make all box corners rounded:<br /></li>
+<br />
+div.rounded-box {<br />
+<br />
+border-radius: 10px;<br />
+<br />
+};<br />
+<br />
+<li>To choose what borders will be rounded:<br /></li>
+<br />
+border-radius: 0 0 10px 10px; (css-shorthand, clockwise)<br />
+<br />
+<li>To make a Circle:<br /></li>
+<br />
+div.circle {<br />
+<br />
+width: 200px;<br />
+height: 200px;<br />
+border-radius: 100px (half of the height);<br />
+line-height: 200px (to center the text inside);<br />
+};<br />
+<br />
+   <h3> - CSS Sprites<br /></h3>
+<br />
+When we use icons we collect them all on 1 spritesheet for faster loading;<br />
+<br />
+<li>In html file:<br /></li>
+<br />
+&lt;span class="home-icon"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/span&gt;<br />
+<br />
+<li>In CSS-file we'll make icon changes in diffeerent states:<br /></li>
+<br />
+span.icon a:link, span.icon a:visited {<br />
+<br />
+display: block;<br />
+text-indent: -9999px<br />
+<br />
+};<br />
+<br />
+span.home a:link, span.home a:visited {<br />
+<br />
+width: 150px;<br />
+height: 150px;<br />
+background: url(../images/sprites.jpg) top left no-repeat;<br />
+};<br />
+    <br />
+span.home a:hover {<br />
+<br />
+background-position: 0 -120px (horizontal, vertical offset);<br />
+<br />
+};<br />
+<br />
+span.home a:active {<br />
+<br />
+background-position: 0 -240px;<br />
+<br />
+};<br />
 
+    
+
+<br />
+<br />
+ <h3>- CSS Z-Index<br /></h3>
+<br />
+<li>Affects overlapping of elements;<br /></li>
+<br />
+<li>The bigger z-index - the higher element is;<br /></li>
+<br />
+<li>For z-index to work, elements should have position: relative;</li>
+    <br />
+    <br />
+    
+     <h3>- CSS Display Property<br /></h3>
+<br />
+<li>Inline. <br /></li>
+<br />
+Sits on the same line with other elements. <br />
+<br />
+By default 'text', 'span' and 'img' elements are inline. Only horiz. padding available<br />
+<br />
+<li>Block.<br /></li>
+<br />
+Sits on it's own line<br />
+<br />
+By default 'div','h1-5','p' elements are blocks. Block can have custom padding, margin, float, position, etc.<br />
+<br />
+<li>Inline-Block.<br /></li>
+<br />
+Display text as inline, and div as block at the same time.<br />
+<br />
+<li>Display: none<br /></li>
+<br />
+For hiding code. Useful for mobile versions.<br />
+<br />
+    <br />
+    <br />
+<h3> - CSS Image Center<br /></h3>
+<br />
+<li>We can align element in HTML, but cannot center it there:<br /></li>
+<br />
+&lt;img src="cat.jpg" alt="Cat" align="left"/&gt;<br />
+<br />
+<li>Add element to new div in HTML, then in CSS:<br /></li>
+<br />
+div.box {<br />
+<br />
+text-align: center;<br />
+<br />
+};<br />
+<br />
+<li>Also we can center only with CSS:<br /></li>
+<br />
+img {<br />
+<br />
+display: block;<br />
+margin-left: 20px auto; (also we ca use shorthand 0 0 0 0)<br />
+<br />
+};<br />
+    <br />
+     <h3>- CSS Image Background<br /></h3>
+<br />
+<li>Tiled Background. We create small png-piece, and in CSS to the container class add:<br /></li>
+<br />
+background-image: url(../images/...);<br />
+background-repeat: repeat-x; (to  point direction)<br />
+<br />
+<li>Header image. <br /></li>
+<br />
+We use images bigger then header for responcive purposes.<br />
+<br />
+In css remove default paddings and add:<br />
+<br />
+background-image: url(....);<br />
+background-position: right center; (horizontal, vertical)<br />
+background-repear: no-repeat;<br />
+<br />
+<li>Box Image. <br /></li>
+<br />
+If we need to fit image in certain box, we still use bugger image and position it in css:<br />
+<br />
+background-image: url(...);<br />
+background-position: center center;<br />
+background-size: 200px 100px; (or cover - best prectice)<br />
+background-repeat: no-repeat;<br />
+<br />
+<li>To make code cleaner we can combine background properties into a single-line - CSS-Shorthand<br /></li>
+<br />
+background: black url(...) center center no-repeat;<br />
+<br />
+<li>To add multiple images at once:<br /></li>
+<br />
+.container {<br />
+<br />
+background: black url(...) center center no-repeat,<br />
+background: black url(...) center center no-repeat,<br />
+background: black url(...) center center no-repeat, (for each image, separate with ,)<br />
+  <br />  
+    
+
+
+    
+    </ul>
 ***********************************************************************************************************<br />
 
                     </p> 
