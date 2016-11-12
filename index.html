@@ -18,10 +18,45 @@
       
      <div class="sidebar">
 	  <ul id="nav">
-	    <li><a href="#topic1">HTML Syntax</a></li>
+          <li><a href="#topic1">HTML Syntax</a></li>
+          <div class="sublinks1">
+          <li><a href="#htmlBasic"><span class="small">1. Basic Structure</span></a></li>        
+          <li><a href="#htmlTags"><span class="small">2. HTML-Tags</span></a></li>
+          </div>
+          
+            
+                                       
 		<li><a href="#topic2">CSS Syntax</a></li>
-		<li><a href="#topic3">Topic #3</a></li>
-	  </ul>	
+          
+              
+          <li><a href="#cssSelectors"><span class="small">1. CSS-Selectors</span></a></li>
+          <li><a href="#cssWorkflow"><span class="small">2. CSS-Workflow</span></a></li>
+          
+          
+          <li><a href="#cssElements" class="css-el"><span class="small">3. CSS-Elements</span></a></li>
+         
+          <div class="css-elements">
+                 <li><a href="#cssMenu"><span class="small">- Menu (nav & dropdown)</span></a></li>
+          <li><a href="#cssPosition"><span class="small">- Positioning</span></a></li>
+          <li><a href="#cssDisplay"><span class="small">- Display Property</span></a></li>
+          <li><a href="#cssEqualColumns"><span class="small">- Equal height columns</span></a></li>
+          <li><a href="#cssShadows"><span class="small">- Shadows</span></a></li>
+          <li><a href="#cssZindex"><span class="small">- Z-Index</span></a></li>
+          <li><a href="#cssTypography"><span class="small">- Typograhy</span></a></li>
+          <li><a href="#cssCorners"><span class="small">- Rounded Corners</span></a></li>
+          <li><a href="#cssBackImage"><span class="small">- Background image</span></a></li>
+          <li><a href="#cssImageCenter"><span class="small">- Image Center</span></a></li>
+          <li><a href="#cssImageBack"><span class="small">- Image Background</span></a></li>
+          <li><a href="#cssSprites"><span class="small">- Sprites</span></a></li>
+                      
+          </div>
+       
+              
+          
+          
+          
+              
+		 </ul>	
 	</div>
       
       <div class="content">
@@ -31,7 +66,12 @@
                   <p>
                      <br />
 
-<h3>1. Basic HTML Document structure:</h3>
+<div id="htmlBasic"></div>
+                     <br />
+                     <br />
+                     <br />
+                     <h3>1. Basic HTML Document structure:</h3>
+                     
 <br />
 &lt;html&gt;       - Beginning of tht html-file<br />
 <br />
@@ -76,10 +116,16 @@
 &lt;/html&gt;
                      <br />
                      <br />
+  
 ***********************************************************************************************************
+                 
                      
-<br />
-                     <h3>2. Html Tags</h3><br />
+<div id="htmlTags"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
+
+  <h3>2. Html Tags</h3> <br />                  
 <br />
  <h3>- Text tags:<br /></h3>
 <br /><ul>
@@ -237,7 +283,11 @@ In the form tag:<br />
                  
             <div id="topic2">
                     <h1>CSS Syntax</h1>
-                    <p>                    
+                    <p>  
+                        <div id="cssSelectors"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 
 <h3>1. CSS-Selectors:</h3> <br />
                 We take a part of HTML, using CSS-selectors and style it;<br /> 
@@ -290,6 +340,10 @@ h1 {<br />
      <br />
                 </ul>
 ***********************************************************************************************************<br />
+<div id="cssWorkflow"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
 <h3>2. CSS Workflow<br /></h3>
 <br />
@@ -445,12 +499,19 @@ color: white; (text color)<br />
 </ul>
 
 ***********************************************************************************************************<br />
+<div id="cssElements"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
 <h3>3. CSS Elements<br /></h3>
 <br />
 
 <ul>
- 
+ <div id="cssMenu"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
  <h3>- Navigation Menu.<br /></h3>
 <br />
@@ -535,6 +596,10 @@ float: none;<br />
 <br />
 };
  <br /> 
+    <div id="cssBackImage"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
   <h3>  - CSS Background image<br /></h3>
 <br />
@@ -563,6 +628,10 @@ height: ..px;<br />
 <br />
 };
     <br />
+    <div id="cssEqualColumns"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
     <h3>- Equal height columns.<br /></h3>
 <br />
@@ -580,6 +649,10 @@ top-left: repeat-y;<br />
 <br />
 };<br />
     <br />
+    <div id="cssShadows"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     
   <h3> - CSS Shadows<br /></h3> 
 <br />
@@ -603,6 +676,10 @@ box-shadow: 5px 5px 5px red;<br />
 <br />
 box-shadow: 5px 5px 5px rgba(123, 170, 13, .5); (values of red, green, blue, opacity 1=100%)<br />
 <br />
+    <div id="cssPosition"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
 <h3>- CSS Positioning<br /></h3>
 <br />
@@ -612,6 +689,10 @@ box-shadow: 5px 5px 5px rgba(123, 170, 13, .5); (values of red, green, blue, opa
 <br />
 <li>Parent element. To make element a parent wi give it relative position.<br /></li>
 <br />
+    <div id="cssTypography"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
  <h3>- CSS Typograhy<br /></h3>
 <br />
@@ -635,6 +716,10 @@ line-height: ..px;<br />
 <br />
 text-indent: ..px; (Spacing at first line of the paragraph)<br />
 <br />
+    <div id="cssCorners"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
  <h3>- CSS Rounded Corners<br /></h3>
 <br />
@@ -659,6 +744,10 @@ height: 200px;<br />
 border-radius: 100px (half of the height);<br />
 line-height: 200px (to center the text inside);<br />
 };<br />
+    <div id="cssSprites"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
    <h3> - CSS Sprites<br /></h3>
 <br />
@@ -699,6 +788,10 @@ background-position: 0 -240px;<br />
     
 
 <br />
+    <div id="cssZindex"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
 <br />
  <h3>- CSS Z-Index<br /></h3>
 <br />
@@ -709,6 +802,10 @@ background-position: 0 -240px;<br />
 <li>For z-index to work, elements should have position: relative;</li>
     <br />
     <br />
+    <div id="cssDisplay"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     
      <h3>- CSS Display Property<br /></h3>
 <br />
@@ -733,6 +830,10 @@ Display text as inline, and div as block at the same time.<br />
 For hiding code. Useful for mobile versions.<br />
 <br />
     <br />
+    <div id="cssImageCenter"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
 <h3> - CSS Image Center<br /></h3>
 <br />
@@ -756,6 +857,10 @@ display: block;<br />
 margin-left: 20px auto; (also we ca use shorthand 0 0 0 0)<br />
 <br />
 };<br />
+    <div id="cssImageBack"><span></span></div>
+                     <br />
+                     <br />
+                     <br />
     <br />
      <h3>- CSS Image Background<br /></h3>
 <br />

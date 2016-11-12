@@ -12,3 +12,18 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+$(document).ready(function() {
+       $(".css-elements").slideToggle('none');      
+   });
+
+$(document).ready(function() {
+   $("a.css-el").click(function() {
+       $(".css-elements").slideToggle('fast');      
+   }) ;
+    
+});
+
+
+
+
