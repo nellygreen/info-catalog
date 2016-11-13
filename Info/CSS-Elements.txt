@@ -1,0 +1,341 @@
+3. CSS Elements
+
+ - Equal height columns.
+
+If we want one of columns to have a tiled background image, and to be equal-height to other:
+
+We prepare image the right with but very short;
+
+We'll tile in by Y-axis:
+
+#body  {
+
+background: url(../images/backgtound-tile.jpg);
+
+top-left: repeat-y;
+
+};
+
+ - Navigation Menu.
+
+In html we create menu as a unordered list:
+
+<ul id="nav" class="clearfix">
+
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+
+</ul>
+
+In CSS we remowe margin and paddinl from ul and apply background-color:
+
+#nav {
+
+margin: 0;
+padding: 0;
+background-color: #...;
+
+For list items: remove bullets, float to left/right to make links stay in one line;
+
+#nav li {
+
+list-style: none;
+float: left;
+padding: 0 15px 0 0;
+
+Display links as a block. 
+
+This way we target square around all links, not the scquare around individual link (for inline elements):
+
+#nav li a:link; #nav li a:visited {
+
+display: block;
+padding: 10px; (around all block)
+
+To separate links:
+
+border-right: 1px solid red;
+
+To add a hover style:
+
+#nav li a:hover {
+
+background-color; red;
+color: white;
+
+};
+
+ - CSS Dropdown Menu
+
+First we create simple menu as previous. Remove bullets, make spacing etc.
+
+To add second level of links in 1 section: 
+
+In Html file in main <ul> cleate new <ul> with <li> for each buttton
+
+To hite second-line links in default state: 
+
+In CSS-file
+
+div# nav ul ul {
+
+position: absolute;
+left: -999em;
+
+};
+
+To display links back when hover over 1st level link:
+
+div#nav ul li:hover ul {
+
+left: auto; (this will cancel invisibility)
+
+To make dropdown menu vertical and remove extra spacing, create new css-rule:
+
+div #nav ul li ul li {
+
+float: none;
+
+};
+
+ - CSS Background image
+
+If the image is used for styling purposes (logos, large-heros etc), we use backgroung instead if img element.Better for CEO.
+
+#header h1{
+
+background: url(../images/headimg.jpg) top-left: no-repeat;
+width: ...px;
+height: ...px;
+text-indent: -999px; (to hide text)
+
+To make it a link:
+
+In html-code add:
+
+<h1><a href="#">CSS Logo Here</a></h1>
+
+In CSS code:
+
+#header h1 a:link, #header h1 a:visited {
+
+display: block;
+width: ..px;
+height: ..px;
+
+};
+
+- CSS Shadows
+
+Text shadow - applied to text elements:
+
+h1 {
+
+text-shadow: 3px 0px 0px red; (offset-right, offset-vertical, blur, color )
+
+};
+
+Box shadow
+
+div.container {
+
+box-shadow: 5px 5px 5px red;
+
+};
+
+To apply transparency to shadow we use rgba value:
+
+box-shadow: 5px 5px 5px rgba(123, 170, 13, .5); (values of red, green, blue, opacity 1=100%)
+
+- CSS Positioning
+
+Relative (position: relative) - When ve need to move element without affecting other elements around;
+
+Absolute (position: absolute) - Align the element according to its patent element.
+
+Parent element. To make element a parent wi give it relative position.
+
+ - CSS Typograhy
+
+font-family: - Font Type;
+
+font-size: 3px/em/rem;
+
+font-weight: normal/bold/number;
+
+letter-spacing: 3px;
+
+text-shadow: ...;
+
+text-decoration: none/underline; (by default)
+
+text-transform: uppercase/lowercase; (all big or all small)
+
+text-align: right/center/left;
+
+line-height: ..px;
+
+text-indent: ..px; (Spacing at first line of the paragraph)
+
+
+ - CSS Rounded Corners
+
+To make all box corners rounded:
+
+div.rounded-box {
+
+border-radius: 10px;
+
+};
+
+To choose what borders will be rounded:
+
+border-radius: 0 0 10px 10px; (css-shorthand, clockwise)
+
+To make a Circle:
+
+div.circle {
+
+width: 200px;
+height: 200px;
+border-radius: 100px (half of the height);
+line-height: 200px (to center the text inside);
+};
+
+- CSS Sprites
+
+When we use icons we collect them all on 1 spritesheet for faster loading;
+
+In html file:
+
+<span class="home-icon"><a href="#">Home</a></span>
+
+In CSS-file we'll make icon changes in diffeerent states:
+
+span.icon a:link, span.icon a:visited {
+
+display: block;
+text-indent: -9999px
+
+};
+
+span.home a:link, span.home a:visited {
+
+width: 150px;
+height: 150px;
+background: url(../images/sprites.jpg) top left no-repeat;
+
+span.home a:hover {
+
+background-position: 0 -120px (horizontal, vertical offset);
+
+};
+
+span.home a:active {
+
+background-position: 0 -240px;
+
+};
+
+ - CSS Z-Index
+
+Affects overlapping of elements;
+
+The bigger z-index - the higher element is;
+
+For z-index to work, elements should have position: relative;
+
+ - CSS Display Property
+
+Inline. 
+
+Sits no the same line with other elements. 
+
+By default 'text', 'span' and 'img' elements are inline. Only horiz. padding available
+
+Block.
+
+Sits on it's own line
+
+By default 'div','h1-5','p' elements are blocks. Block can have custom padding, margin, float, position, etc.
+
+Inline-Block.
+
+Display text as inline, and div as block at the same time.
+
+Display: none
+
+For hiding code. Useful for mobile versions.
+
+ - CSS Image Center
+
+We can align element in HTML, but cannot center it there:
+
+<img src="cat.jpg" alt="Cat" align="left"/>
+
+Add element to new div in HTML, then in CSS:
+
+div.box {
+
+text-align: center;
+
+};
+
+Also we can center only with CSS:
+
+img {
+
+display: block;
+margin-left: 20px auto; (also we ca use shorthand 0 0 0 0)
+
+};
+
+ - CSS Image Background
+
+Tiled Background. We create small png-piece, and in CSS to the container class add:
+
+background-image: url(../images/...);
+background-repeat: repeat-x; (to  point direction)
+
+Header image. 
+
+We use images bigger then header for responcive purposes.
+
+In css remove default paddings and add:
+
+background-image: url(....);
+background-position: right center; (horizontal, vertical)
+background-repear: no-repeat;
+
+Box Image. 
+
+If we need to fit image in certain box, we still use bugger image and position it in css:
+
+background-image: url(...);
+background-position: center center;
+background-size: 200px 100px; (or cover - best prectice)
+background-repeat: no-repeat;
+
+To make code cleaner we can combine background properties into a single-line - CSS-Shorthand
+
+background: black url(...) center center no-repeat;
+
+To add multiple images at once:
+
+.container {
+
+background: black url(...) center center no-repeat,
+background: black url(...) center center no-repeat,
+background: black url(...) center center no-repeat, (for each image, separate with ,)
+
+
+
+
+
+
+
+
+
+
+
+

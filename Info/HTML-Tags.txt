@@ -1,0 +1,126 @@
+2. Html Tags
+
+ - Text tags:
+
+<h1></h1>  - Title (to h5) , <p></p> - Paragraph; 
+
+<abbr title="..."></abbr>  - Longer description of a text when hover over;
+
+<acronym title="..."></acronym> - Ecsplanation of a short text when hover over;
+
+<b></b> - Bold text; <strong></strong> - Strong text;
+
+<big></big> - Bigger text; <small></small> - Smaller text;  
+
+<blogquote></blogquote> - Important statement; <quote></quote> - Statement;
+
+<i></i> , <em></em> - tags for Italic text; 
+
+<center></center> - Centered text; <s></s> - Line through text; </br> - Line break;
+______________________________________________________________
+
+ - Image Tags:
+
+<img></img> - Image; 
+
+src ="..." - Location of the files; 
+
+alt="..." - Alternative text;
+
+height="..." - Height of the image;
+
+width="..." - Width of the image;
+_____________________________________________________________
+
+ - List Tags:
+
+<dl></dl> - Definition list; 
+
+In this list:
+
+<dt></dt> - Title;  <dd></dd> - Description; 
+
+<ol></ol>  -Ordered list;
+
+<ul></ul> - Unordered list;
+
+<li></li> - List item in any list;
+____________________________________________________________
+
+ - Link Tags:
+
+<a></a> - Link indicator;
+
+href="..." - Tells to open the link if clicked;
+
+target="..." - Where new link will bw opened; In target:
+
+'blank' - open in current page; 'self'- open in a new page;
+
+<a name="Some Name">Some Name</a> - allows to jump to certain text on page;
+_____________________________________________________________
+
+ - Table Tags:
+
+<table></table> - Table indicator Tn the table:
+
+summary="...." - Description;
+
+<caption></caption> - Heading;
+
+<tr></tr> - table row;
+
+<th></th> - Header of a column;
+
+<td></td> - Table data(in a column);
+___________________________________________________________
+
+ - Form Tags:
+
+<form action="mail.php" method="post"></form> - Indicate a Form and tells browser what to do with it;
+
+method="post" - e-mail on which to send wisible, method="get" - invisible;
+
+In the form tag:
+
+<b>Heading Here</b></br> - Heading before name, email, password or other data section;
+
+<input type="text" name="email" size=40/></br> - Email section
+
+<input type="text" name="textinput"/></br> - Name(or other data) section;
+
+<input type="password" name="password"/></br>
+
+<textarea cols=40 rows=10 name="message">Message goes here</textarea></br> - Text Message section;
+
+<input type="radio" name="radioinput" value="Love this"/>Love This</br> - Input to check among possible veriations;
+
+<input type="checkbox" name="checkboxinput" value="Hate it"/>Hate it</br> - Chechbox for multiple possibilities;
+
+<select name="selectinput">
+<option value="loveselect">I Love This</option>\
+</select></br>
+
+This is a Dropdown checkbox;
+
+<input type="submit" value="Send">  - Submit/Send button;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

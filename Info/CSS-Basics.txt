@@ -1,0 +1,201 @@
+CSS Syntax
+
+ We take a part of HTML, using CSS-selectors and style it;
+
+1. CSS-Selectors:
+
+ID-Selectors - Styling a unique part of HTML.
+
+ - Every id is used only 1 time. In html-file we geve a sertain area unique ID this way:
+
+ <div id="testimonials">...</div>
+
+ - In css-file we'll select it this way:
+
+ #testimonials {
+
+  color: ...;
+
+};
+
+Type-Selectors  -  Styling by HTML-Tags. (applies to all site)
+
+h1 {
+
+  font-size: ...;
+  color: ...;
+
+};
+
+Class-Selectors - Reusable style blocks.
+
+ - We can create a class and apply it to multiple elements on the page. 
+
+Classes help to reduce amount of code, so we use them a lot, when we need the same property in different tags.
+
+In html-file:
+
+<h1 class="superHeading">My super heading</h1>
+
+ - in css-file:
+
+ .superHeading {
+
+  font-size: ...;
+  color: ...;
+
+};
+
+2. CSS Workflow
+
+ - Basic Layout:
+
+#container {};
+
+#header {};
+
+#nav {};
+
+#body {};
+
+.main {};
+
+.side {};
+
+#footer {};
+
+ - Center the Layout:
+
+#container {
+
+width: ...px;
+margin: 0 auto; (vertical horizontal)
+
+};
+
+ - Make navigation sit horizontally:
+
+#nav li {
+
+list-style: none; (remove bullets)
+float: left;
+
+};
+
+ - Clear floats with clearfix code.
+
+ - Make 2 central columns to sit side by side:
+
+.main {
+
+width: ...px;
+float: left;
+
+}; 
+
+.side {
+
+width: ...px;
+float: left;
+
+};
+
+ - Clear footer floats:
+
+ Put clearfix code into a footer div:
+
+<div id="footer" class="clearfix"></div>
+
+Also define 'clearfix' values in CSS-file
+
+ - Add padding between 2 columns. To do this:
+
+Add new div with class sel. inside main column div in the html-file:
+
+<div class="main-inner"></div>
+
+In css-file:
+
+.main-inner {
+
+padding: 0 60px 0 0;  (top. right, bottom, left)
+
+};
+
+ - Style the navigation:
+
+Remove default spacing:
+
+#nav {
+
+margin: 0;
+padding: 0;
+
+};
+
+Add individual spacing between each nav item:
+
+#nav li {
+
+padding: 0 15px 0 0; 
+
+};
+
+Remove underline under links:
+
+#nav li {
+
+nav li a:link; nav li a:visited {
+
+text-decoration: none;
+
+};
+
+Set color of the Navigation bar:
+
+#nav {
+
+background-color: #......;
+
+};
+
+ - Style Body:
+
+Change font:
+
+#body {
+
+font-family: Ariel, Sans-Serif; (2nd in case 1st not loading)
+
+};
+
+Set Line-height of paragraphs:
+
+#body p {
+
+line-height: 1.6em;
+
+};
+
+Add padding to the container:
+
+#container {
+
+padding: 30px;
+
+};
+
+ - Style the Footer:
+
+#footer {
+
+background-color: #....;
+color: white; (text color)
+
+};
+
+______________________________________________________________
+
+
+
+
